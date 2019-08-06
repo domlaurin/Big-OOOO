@@ -8,7 +8,7 @@ class MinMaxStackQueue
     @input = MinMaxStack.new
     @output = MinMaxStack.new
   end
- 
+
   def size
     @input.length
   end
@@ -44,15 +44,15 @@ end
 
 sq = MinMaxStackQueue.new
 
-p sq.min
-p sq.max
-p sq.enqueue(20) 
-p sq.enqueue(3) 
-p sq.enqueue(4) 
-p sq.enqueue(10)
-p sq.min
-p sq.max
-p sq.dequeue
-p sq.enqueue(2)
-p sq.min
-p sq.max
+# p sq.min
+# p sq.max
+# p sq.enqueue(20) 
+# p sq.enqueue(3) 
+# p sq.enqueue(4) 
+# p sq.enqueue(10)
+# p sq.min
+# p sq.max
+# p sq.dequeue
+# p sq.enqueue(2)
+# p sq.min
+# p sq.max
