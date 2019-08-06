@@ -1,41 +1,41 @@
 require_relative 'MinMaxStackQueue.rb'
 
-def windowed_max_range(array, window_size)
-    sq = MinMaxStackQueue.new
-    current_max_range = 0
-    array.each_with_index do |ele, i|
-        if i < window_size - 1
-            sq.enqueue(ele)
-            next
-        end
-        if i == window_size -1
-            sq.enqueue(ele)
-            if current_max_range < sq.max - sq.min
-                current_max_range = sq.max - sq.min
-            end
-            next
-        end
-        sq.enqueue(ele)
-        sq.dequeue
-        if current_max_range < sq.max - sq.min
-            current_max_range = sq.max - sq.min
-        end
-    end
-    current_max_range
-end
+# def windowed_max_range(array, window_size)
+#     sq = MinMaxStackQueue.new
+#     current_max_range = 0
+#     array.each_with_index do |ele, i|
+#         if i < window_size - 1
+#             sq.enqueue(ele)
+#             next
+#         end
+#         if i == window_size -1
+#             sq.enqueue(ele)
+#             if current_max_range < sq.max - sq.min
+#                 current_max_range = sq.max - sq.min
+#             end
+#             next
+#         end
+#         sq.enqueue(ele)
+#         sq.dequeue
+#         if current_max_range < sq.max - sq.min
+#             current_max_range = sq.max - sq.min
+#         end
+#     end
+#     current_max_range
+# end
 
-windowed_max_range([1, 0, 2, 5, 4, 8], 3) == 5 # 0, 2, 5
-1, 0, 2
+# windowed_max_range([1, 0, 2, 5, 4, 8], 3) == 5 # 0, 2, 5
+# 1, 0, 2
 
-def windowed_max_range(array, window_size)
-    sq = MinMaxStackQueue.new
+# def windowed_max_range(array, window_size)
+#     sq = MinMaxStackQueue.new
 
-    array_with_index.each do |ele, i|
-        if i < window_size
-        sq.enqueue << ele 
-    end
+#     array_with_index.each do |ele, i|
+#         if i < window_size
+#         sq.enqueue << ele 
+#     end
 
-end
+# end
 
 Basic solution
 def windowed_max_range(array, window_size)
@@ -49,7 +49,7 @@ def windowed_max_range(array, window_size)
     start +=1
     stop += 1
   end
-max_range
+p max_range
 end
 
 O(n) solution
