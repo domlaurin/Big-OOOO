@@ -8,7 +8,7 @@ class MinMaxStackQueue
     @input = MinMaxStack.new
     @output = MinMaxStack.new
   end
-
+ 
   def size
     @input.length
   end
